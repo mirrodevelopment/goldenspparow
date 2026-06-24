@@ -1,0 +1,327 @@
+{
+  "norway": {
+    "id": "norway",
+    "country": "Norway",
+    "seasonName": "Fjord Aurora Nights",
+    "travelMonths": "Jan - Mar",
+    "description": "Chase the ethereal dance of green auroral curtains over deep, snowy arctic fjords.",
+    "averageTemperature": "-2°C",
+    "flightDuration": "7.5h",
+    "experienceType": "Adventure",
+    "heroImage": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Tromsø",
+        "category": "Arctic Gateway"
+      },
+      {
+        "name": "Lofoten",
+        "category": "Scenic Peaks"
+      },
+      {
+        "name": "Senja",
+        "category": "Rugged Coastlines"
+      }
+    ]
+  },
+  "finland": {
+    "id": "finland",
+    "country": "Finland",
+    "seasonName": "Lapland Polar Winter",
+    "travelMonths": "Dec - Jan",
+    "description": "Sleigh through snow-covered pine forests under the soft, pastel hues of the polar night.",
+    "averageTemperature": "-6°C",
+    "flightDuration": "8.5h",
+    "experienceType": "Wildlife",
+    "heroImage": "https://images.unsplash.com/photo-1529963183134-61a90db47eaf?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Rovaniemi",
+        "category": "Santa's Village"
+      },
+      {
+        "name": "Levi",
+        "category": "Arctic Skiing"
+      },
+      {
+        "name": "Inari",
+        "category": "Sámi Culture"
+      }
+    ]
+  },
+  "japan": {
+    "id": "japan",
+    "country": "Japan",
+    "seasonName": "Kyoto Cherry Blossom",
+    "travelMonths": "Mar - Apr",
+    "description": "Witness the transient beauty of soft pink cherry blossoms framing ancient temples.",
+    "averageTemperature": "22°C",
+    "flightDuration": "11h",
+    "experienceType": "Culture",
+    "heroImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Mount Fuji",
+        "category": "Sacred Peak"
+      },
+      {
+        "name": "Kyoto",
+        "category": "City"
+      },
+      {
+        "name": "Nara",
+        "category": "Deer & Temples"
+      }
+    ]
+  },
+  "france": {
+    "id": "france",
+    "country": "France",
+    "seasonName": "Paris Spring Bloom",
+    "travelMonths": "Jun - Jul",
+    "description": "Wander through endless purple lavender fields and sun-drenched coastal villages of the Riviera.",
+    "averageTemperature": "25°C",
+    "flightDuration": "7h",
+    "experienceType": "Art & Leisure",
+    "heroImage": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Provence",
+        "category": "Lavender Valleys"
+      },
+      {
+        "name": "Nice",
+        "category": "Cote d'Azur"
+      },
+      {
+        "name": "Paris",
+        "category": "City of Light"
+      }
+    ]
+  },
+  "iceland": {
+    "id": "iceland",
+    "country": "Iceland",
+    "seasonName": "Midnight Sun",
+    "travelMonths": "Jun - Aug",
+    "description": "Explore dramatic volcanic cliffs and roaring waterfalls under the surreal midnight sun.",
+    "averageTemperature": "12°C",
+    "flightDuration": "5.5h",
+    "experienceType": "Nature",
+    "heroImage": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Blue Lagoon",
+        "category": "Geothermal Spa"
+      },
+      {
+        "name": "Vik",
+        "category": "Black Sand Beaches"
+      },
+      {
+        "name": "Golden Circle",
+        "category": "Geysers & Waterfalls"
+      }
+    ]
+  },
+  "egypt": {
+    "id": "egypt",
+    "country": "Egypt",
+    "seasonName": "Nile Ancient Autumn",
+    "travelMonths": "Oct - Nov",
+    "description": "Sail the timeless Nile waters to discover towering sandstone temples and forgotten tombs.",
+    "averageTemperature": "28°C",
+    "flightDuration": "12h",
+    "experienceType": "History",
+    "heroImage": "https://images.unsplash.com/photo-1503177119275-0aa32b31d458?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Giza",
+        "category": "Pyramids & Sphinx"
+      },
+      {
+        "name": "Luxor",
+        "category": "Pharaonic Valley"
+      },
+      {
+        "name": "Aswan",
+        "category": "Nile Tranquility"
+      }
+    ]
+  },
+  "india": {
+    "id": "india",
+    "country": "India",
+    "seasonName": "Taj & Monsoon Festivals",
+    "travelMonths": "Oct - Dec",
+    "description": "Experience vibrant festivals, palace heritage, and the majestic white marble Taj Mahal.",
+    "averageTemperature": "24°C",
+    "flightDuration": "14h",
+    "experienceType": "Culture",
+    "heroImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Agra",
+        "category": "Taj Mahal"
+      },
+      {
+        "name": "Jaipur",
+        "category": "Palaces & Forts"
+      },
+      {
+        "name": "Udaipur",
+        "category": "Romantic Lakes"
+      }
+    ]
+  },
+  "switzerland": {
+    "id": "switzerland",
+    "country": "Switzerland",
+    "seasonName": "Alpine Autumn Chalets",
+    "travelMonths": "Sep - Oct",
+    "description": "Behold the golden autumn foliage reflecting on pristine lakes and soaring peaks.",
+    "averageTemperature": "14°C",
+    "flightDuration": "8h",
+    "experienceType": "Scenery",
+    "heroImage": "https://images.unsplash.com/photo-1482862549707-f63cb32c5fd9?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Zermatt",
+        "category": "Alpine Adventure"
+      },
+      {
+        "name": "Interlaken",
+        "category": "Lakes & Valleys"
+      },
+      {
+        "name": "Lucerne",
+        "category": "Culture & Heritage"
+      }
+    ]
+  },
+  "newzealand": {
+    "id": "newzealand",
+    "country": "New Zealand",
+    "seasonName": "Southern Spring Fjords",
+    "travelMonths": "Sep - Nov",
+    "description": "Cruise through deep silent fjords and misty green forests in the southern spring.",
+    "averageTemperature": "16°C",
+    "flightDuration": "17h",
+    "experienceType": "Hiking",
+    "heroImage": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Queenstown",
+        "category": "Adventure Capital"
+      },
+      {
+        "name": "Milford Sound",
+        "category": "Breathtaking Fjord"
+      },
+      {
+        "name": "Wanaka",
+        "category": "Lakeside Serenity"
+      }
+    ]
+  },
+  "australia": {
+    "id": "australia",
+    "country": "Australia",
+    "seasonName": "Great Coral Spawning",
+    "travelMonths": "Nov - Dec",
+    "description": "Dive into the warm Pacific to witness the massive annual spawning of the Great Barrier Reef.",
+    "averageTemperature": "27°C",
+    "flightDuration": "20h",
+    "experienceType": "Marine",
+    "heroImage": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Cairns",
+        "category": "Reef Gateway"
+      },
+      {
+        "name": "Whitsundays",
+        "category": "Island Paradise"
+      },
+      {
+        "name": "Sydney",
+        "category": "Opera House City"
+      }
+    ]
+  },
+  "brazil": {
+    "id": "brazil",
+    "country": "Brazil",
+    "seasonName": "Amazon Emerald Season",
+    "travelMonths": "May - Jun",
+    "description": "Discover lush rainforest canopies, golden beaches, and the rhythmic soul of samba and bossa nova.",
+    "averageTemperature": "28°C",
+    "flightDuration": "10h",
+    "experienceType": "Nature & Culture",
+    "heroImage": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Rio de Janeiro",
+        "category": "Coastal Metropolis"
+      },
+      {
+        "name": "Iguazu Falls",
+        "category": "Thundering Waterfalls"
+      },
+      {
+        "name": "Amazon Manaus",
+        "category": "Rainforest Gateway"
+      }
+    ]
+  },
+  "peru": {
+    "id": "peru",
+    "country": "Peru",
+    "seasonName": "Andean Dry Season",
+    "travelMonths": "May - Sep",
+    "description": "Walk the ancient Inca trails above the clouds to the legendary citadel of Machu Picchu.",
+    "averageTemperature": "20°C",
+    "flightDuration": "8h",
+    "experienceType": "History & Adventure",
+    "heroImage": "https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "Machu Picchu",
+        "category": "Lost Inca City"
+      },
+      {
+        "name": "Cusco",
+        "category": "Imperial Capital"
+      },
+      {
+        "name": "Sacred Valley",
+        "category": "Andean Heartland"
+      }
+    ]
+  },
+  "usa": {
+    "id": "usa",
+    "country": "United States",
+    "seasonName": "Golden Fall Foliage",
+    "travelMonths": "Sep - Nov",
+    "description": "Experience the dramatic autumn colours of New England and the iconic skylines of America's greatest cities.",
+    "averageTemperature": "18°C",
+    "flightDuration": "7h",
+    "experienceType": "Nature & Cities",
+    "heroImage": "https://images.unsplash.com/photo-1485738422979-f5c462d49f04?q=80&w=600&auto=format&fit=crop",
+    "attractions": [
+      {
+        "name": "New York City",
+        "category": "The City That Never Sleeps"
+      },
+      {
+        "name": "Grand Canyon",
+        "category": "Natural Wonder"
+      },
+      {
+        "name": "San Francisco",
+        "category": "Pacific Gateway"
+      }
+    ]
+  }
+}

@@ -1,0 +1,428 @@
+# GOLDEN SPARROW - FLUTTER APP INTEGRATION DOCUMENT
+
+Version: 1.0
+
+Date: June 2026
+
+---
+
+# 1. OVERVIEW
+
+Golden Sparrow provides a complete interactive 3D destination discovery globe and a static destination data API.
+
+The Flutter application is responsible for:
+
+* Loading the globe inside a WebView
+* Listening for destination selection events
+* Reading destination data from the JSON API
+* Displaying destination information in the app UI
+
+Golden Sparrow does not provide:
+
+* Flutter UI
+* Navigation
+* Search UI
+* Bookmarks
+* Booking Flow
+
+These are implemented by the Flutter application.
+
+---
+
+# 2. PRODUCTION URLS
+
+## Globe URL
+
+```text
+https://mirro.in/goldensparrow.html
+```
+
+## Destination Data API
+
+```text
+https://mirro.in/api/destinations.json
+```
+
+---
+
+# 3. SYSTEM FLOW
+
+```text
+User Opens App
+        │
+        ▼
+Flutter WebView
+        │
+        ▼
+goldensparrow.html
+        │
+        ▼
+User Selects Destination
+        │
+        ▼
+postMessage Event
+        │
+        ▼
+Flutter Receives destinationId
+        │
+        ▼
+Fetch destinations.json
+        │
+        ▼
+Find Destination Data
+        │
+        ▼
+Display Destination Information
+```
+
+---
+
+# 4. DESTINATION SELECTION EVENT
+
+When a destination is selected on the globe, Golden Sparrow sends:
+
+```json
+{
+  "type": "destination_selected",
+  "destinationId": "japan"
+}
+```
+
+Example:
+
+```json
+{
+  "type": "destination_selected",
+  "destinationId": "norway"
+}
+```
+
+The destinationId always matches a key inside:
+
+```text
+https://mirro.in/api/destinations.json
+```
+
+---
+
+# 5. AVAILABLE DESTINATION IDS
+
+```text
+norway
+finland
+japan
+france
+iceland
+egypt
+india
+switzerland
+newzealand
+australia
+brazil
+peru
+usa
+```
+
+---
+
+# 6. FLUTTER DEPENDENCIES
+
+Add:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+
+  webview_flutter: ^4.8.0
+  http: ^1.2.1
+```
+
+Run:
+
+```bash
+flutter pub get
+```
+
+---
+
+# 7. WEBVIEW IMPLEMENTATION
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
+class GlobeScreen extends StatefulWidget {
+  const GlobeScreen({super.key});
+
+  @override
+  State<GlobeScreen> createState() => _GlobeScreenState();
+}
+
+class _GlobeScreenState extends State<GlobeScreen> {
+
+  late final WebViewController controller;
+
+  @override
+  void initState() {
+    super.initState();
+
+    controller = WebViewController()
+      ..setJavaScriptMode(
+        JavaScriptMode.unrestricted,
+      )
+      ..loadRequest(
+        Uri.parse(
+          'https://mirro.in/goldensparrow.html',
+        ),
+      );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: WebViewWidget(
+        controller: controller,
+      ),
+    );
+  }
+}
+```
+
+---
+
+# 8. RECEIVING DESTINATION EVENTS
+
+Flutter must listen for messages from the WebView.
+
+Expected Message:
+
+```json
+{
+  "type": "destination_selected",
+  "destinationId": "japan"
+}
+```
+
+Example Handler:
+
+```dart
+void onDestinationSelected(
+  String destinationId,
+) async {
+
+  print(destinationId);
+
+  await loadDestination(
+    destinationId,
+  );
+}
+```
+
+---
+
+# 9. FETCHING DESTINATION DATA
+
+```dart
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+Future<void> loadDestination(
+  String destinationId,
+) async {
+
+  final response = await http.get(
+    Uri.parse(
+      'https://mirro.in/api/destinations.json',
+    ),
+  );
+
+  final destinations =
+      jsonDecode(response.body);
+
+  final destination =
+      destinations[destinationId];
+
+  print(destination);
+}
+```
+
+---
+
+# 10. DESTINATION DATA STRUCTURE
+
+Each destination contains:
+
+```json
+{
+  "id": "japan",
+  "country": "Japan",
+  "seasonName": "Kyoto Cherry Blossom",
+  "travelMonths": "Mar - Apr",
+  "description": "Witness the transient beauty of soft pink cherry blossoms framing ancient temples.",
+  "averageTemperature": "22°C",
+  "flightDuration": "11h",
+  "experienceType": "Culture",
+  "heroImage": "https://images.unsplash.com/...",
+
+  "attractions": [
+    {
+      "name": "Mount Fuji",
+      "category": "Sacred Peak"
+    },
+    {
+      "name": "Kyoto",
+      "category": "City"
+    }
+  ]
+}
+```
+
+---
+
+# 11. DESTINATION OBJECT FIELDS
+
+| Field              | Type   | Description                   |
+| ------------------ | ------ | ----------------------------- |
+| id                 | String | Unique destination identifier |
+| country            | String | Country name                  |
+| seasonName         | String | Travel season title           |
+| travelMonths       | String | Best months to travel         |
+| description        | String | Destination description       |
+| averageTemperature | String | Average seasonal temperature  |
+| flightDuration     | String | Estimated flight duration     |
+| experienceType     | String | Travel category               |
+| heroImage          | String | Destination cover image       |
+| attractions        | Array  | Destination attractions       |
+
+---
+
+# 12. ATTRACTIONS STRUCTURE
+
+```json
+{
+  "name": "Mount Fuji",
+  "category": "Sacred Peak"
+}
+```
+
+Fields:
+
+| Field    | Type   |
+| -------- | ------ |
+| name     | String |
+| category | String |
+
+---
+
+# 13. SAMPLE IMPLEMENTATION
+
+```dart
+Future<void> loadDestination(
+  String destinationId,
+) async {
+
+  final response = await http.get(
+    Uri.parse(
+      'https://mirro.in/api/destinations.json',
+    ),
+  );
+
+  final data =
+      jsonDecode(response.body);
+
+  final destination =
+      data[destinationId];
+
+  print(
+      destination["country"]);
+
+  print(
+      destination["seasonName"]);
+
+  print(
+      destination["heroImage"]);
+}
+```
+
+---
+
+# 14. RESPONSIBILITIES
+
+## Golden Sparrow Provides
+
+* Interactive 3D Globe
+* Destination Selection Events
+* Destination JSON Database
+* Destination Images
+* Attraction Data
+
+## Flutter Application Provides
+
+* User Interface
+* Navigation
+* Search
+* Saved Destinations
+* Destination Screens
+* Booking Flow
+* User Accounts
+
+---
+
+# 15. DEPLOYMENT REQUIREMENTS
+
+The following URLs must be publicly accessible:
+
+```text
+https://mirro.in/goldensparrow.html
+
+https://mirro.in/api/destinations.json
+```
+
+Verification:
+
+Open both URLs in a browser.
+
+The globe must load successfully.
+
+The JSON endpoint must return valid JSON.
+
+---
+
+# 16. FINAL INTEGRATION CHECKLIST
+
+✓ Globe loads inside Flutter WebView
+
+✓ User can interact with globe
+
+✓ Destination selection emits destinationId
+
+✓ Flutter receives destinationId
+
+✓ Flutter fetches destinations.json
+
+✓ Destination object is found successfully
+
+✓ Destination information is displayed
+
+✓ All 13 destinations are available
+
+✓ Production URLs are accessible
+
+---
+
+# CONTACT DATA
+
+Project: Golden Sparrow
+
+Globe URL:
+
+https://mirro.in/goldensparrow.html
+
+API URL:
+
+https://mirro.in/api/destinations.json
+
+Integration Method:
+
+Flutter WebView + JSON API
