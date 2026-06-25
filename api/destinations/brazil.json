@@ -1,0 +1,25 @@
+﻿{
+    "id":  "brazil",
+    "country":  "Brazil",
+    "seasonName":  "Amazon Emerald Season",
+    "travelMonths":  "May - Jun",
+    "description":  "Discover lush rainforest canopies, golden beaches, and the rhythmic soul of samba and bossa nova.",
+    "averageTemperature":  "28Â°C",
+    "flightDuration":  "10h",
+    "experienceType":  "Nature \u0026 Culture",
+    "heroImage":  "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "attractions":  [
+                        {
+                            "name":  "Rio de Janeiro",
+                            "category":  "Coastal Metropolis"
+                        },
+                        {
+                            "name":  "Iguazu Falls",
+                            "category":  "Thundering Waterfalls"
+                        },
+                        {
+                            "name":  "Amazon Manaus",
+                            "category":  "Rainforest Gateway"
+                        }
+                    ]
+}

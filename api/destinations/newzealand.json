@@ -1,0 +1,25 @@
+﻿{
+    "id":  "newzealand",
+    "country":  "New Zealand",
+    "seasonName":  "Southern Spring Fjords",
+    "travelMonths":  "Sep - Nov",
+    "description":  "Cruise through deep silent fjords and misty green forests in the southern spring.",
+    "averageTemperature":  "16Â°C",
+    "flightDuration":  "17h",
+    "experienceType":  "Hiking",
+    "heroImage":  "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "attractions":  [
+                        {
+                            "name":  "Queenstown",
+                            "category":  "Adventure Capital"
+                        },
+                        {
+                            "name":  "Milford Sound",
+                            "category":  "Breathtaking Fjord"
+                        },
+                        {
+                            "name":  "Wanaka",
+                            "category":  "Lakeside Serenity"
+                        }
+                    ]
+}

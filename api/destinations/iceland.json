@@ -1,0 +1,25 @@
+﻿{
+    "id":  "iceland",
+    "country":  "Iceland",
+    "seasonName":  "Midnight Sun",
+    "travelMonths":  "Jun - Aug",
+    "description":  "Explore dramatic volcanic cliffs and roaring waterfalls under the surreal midnight sun.",
+    "averageTemperature":  "12Â°C",
+    "flightDuration":  "5.5h",
+    "experienceType":  "Nature",
+    "heroImage":  "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "attractions":  [
+                        {
+                            "name":  "Blue Lagoon",
+                            "category":  "Geothermal Spa"
+                        },
+                        {
+                            "name":  "Vik",
+                            "category":  "Black Sand Beaches"
+                        },
+                        {
+                            "name":  "Golden Circle",
+                            "category":  "Geysers \u0026 Waterfalls"
+                        }
+                    ]
+}

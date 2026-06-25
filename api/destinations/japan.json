@@ -1,0 +1,25 @@
+﻿{
+    "id":  "japan",
+    "country":  "Japan",
+    "seasonName":  "Kyoto Cherry Blossom",
+    "travelMonths":  "Mar - Apr",
+    "description":  "Witness the transient beauty of soft pink cherry blossoms framing ancient temples.",
+    "averageTemperature":  "22Â°C",
+    "flightDuration":  "11h",
+    "experienceType":  "Culture",
+    "heroImage":  "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "attractions":  [
+                        {
+                            "name":  "Mount Fuji",
+                            "category":  "Sacred Peak"
+                        },
+                        {
+                            "name":  "Kyoto",
+                            "category":  "City"
+                        },
+                        {
+                            "name":  "Nara",
+                            "category":  "Deer \u0026 Temples"
+                        }
+                    ]
+}

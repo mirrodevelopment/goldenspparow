@@ -1,0 +1,25 @@
+﻿{
+    "id":  "peru",
+    "country":  "Peru",
+    "seasonName":  "Andean Dry Season",
+    "travelMonths":  "May - Sep",
+    "description":  "Walk the ancient Inca trails above the clouds to the legendary citadel of Machu Picchu.",
+    "averageTemperature":  "20Â°C",
+    "flightDuration":  "8h",
+    "experienceType":  "History \u0026 Adventure",
+    "heroImage":  "https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "attractions":  [
+                        {
+                            "name":  "Machu Picchu",
+                            "category":  "Lost Inca City"
+                        },
+                        {
+                            "name":  "Cusco",
+                            "category":  "Imperial Capital"
+                        },
+                        {
+                            "name":  "Sacred Valley",
+                            "category":  "Andean Heartland"
+                        }
+                    ]
+}

@@ -1,0 +1,25 @@
+﻿{
+    "id":  "india",
+    "country":  "India",
+    "seasonName":  "Taj \u0026 Monsoon Festivals",
+    "travelMonths":  "Oct - Dec",
+    "description":  "Experience vibrant festivals, palace heritage, and the majestic white marble Taj Mahal.",
+    "averageTemperature":  "24Â°C",
+    "flightDuration":  "14h",
+    "experienceType":  "Culture",
+    "heroImage":  "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "attractions":  [
+                        {
+                            "name":  "Agra",
+                            "category":  "Taj Mahal"
+                        },
+                        {
+                            "name":  "Jaipur",
+                            "category":  "Palaces \u0026 Forts"
+                        },
+                        {
+                            "name":  "Udaipur",
+                            "category":  "Romantic Lakes"
+                        }
+                    ]
+}

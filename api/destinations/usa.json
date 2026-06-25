@@ -1,0 +1,25 @@
+﻿{
+    "id":  "usa",
+    "country":  "United States",
+    "seasonName":  "Golden Fall Foliage",
+    "travelMonths":  "Sep - Nov",
+    "description":  "Experience the dramatic autumn colours of New England and the iconic skylines of America\u0027s greatest cities.",
+    "averageTemperature":  "18Â°C",
+    "flightDuration":  "7h",
+    "experienceType":  "Nature \u0026 Cities",
+    "heroImage":  "https://images.unsplash.com/photo-1485738422979-f5c462d49f04?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "attractions":  [
+                        {
+                            "name":  "New York City",
+                            "category":  "The City That Never Sleeps"
+                        },
+                        {
+                            "name":  "Grand Canyon",
+                            "category":  "Natural Wonder"
+                        },
+                        {
+                            "name":  "San Francisco",
+                            "category":  "Pacific Gateway"
+                        }
+                    ]
+}

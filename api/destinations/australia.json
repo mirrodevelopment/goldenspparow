@@ -1,0 +1,25 @@
+﻿{
+    "id":  "australia",
+    "country":  "Australia",
+    "seasonName":  "Great Coral Spawning",
+    "travelMonths":  "Nov - Dec",
+    "description":  "Dive into the warm Pacific to witness the massive annual spawning of the Great Barrier Reef.",
+    "averageTemperature":  "27Â°C",
+    "flightDuration":  "20h",
+    "experienceType":  "Marine",
+    "heroImage":  "https://images.unsplash.com/photo-1546026423-cc4642628d2b?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "attractions":  [
+                        {
+                            "name":  "Cairns",
+                            "category":  "Reef Gateway"
+                        },
+                        {
+                            "name":  "Whitsundays",
+                            "category":  "Island Paradise"
+                        },
+                        {
+                            "name":  "Sydney",
+                            "category":  "Opera House City"
+                        }
+                    ]
+}

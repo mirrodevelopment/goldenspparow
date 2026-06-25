@@ -1,0 +1,25 @@
+﻿{
+    "id":  "egypt",
+    "country":  "Egypt",
+    "seasonName":  "Nile Ancient Autumn",
+    "travelMonths":  "Oct - Nov",
+    "description":  "Sail the timeless Nile waters to discover towering sandstone temples and forgotten tombs.",
+    "averageTemperature":  "28Â°C",
+    "flightDuration":  "12h",
+    "experienceType":  "History",
+    "heroImage":  "https://images.unsplash.com/photo-1503177119275-0aa32b31d458?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "attractions":  [
+                        {
+                            "name":  "Giza",
+                            "category":  "Pyramids \u0026 Sphinx"
+                        },
+                        {
+                            "name":  "Luxor",
+                            "category":  "Pharaonic Valley"
+                        },
+                        {
+                            "name":  "Aswan",
+                            "category":  "Nile Tranquility"
+                        }
+                    ]
+}
