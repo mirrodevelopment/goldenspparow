@@ -37,10 +37,10 @@ These are implemented by the Flutter application.
 https://mirro.in/goldensparrow.html
 ```
 
-## Destination Data API (Single-Country Endpoint)
+## Destination Data API (Dynamic POST Endpoint)
 
 ```text
-https://mirro.in/api/destinations/{destinationId}.json
+https://mirro.in/api/destination
 ```
 
 ---
@@ -66,10 +66,10 @@ postMessage Event
 Flutter Receives destinationId
         │
         ▼
-Fetch destinations/{destinationId}.json
+POST /api/destination with {"destinationId": destinationId}
         │
         ▼
-Read Destination Data
+Read Single Destination Data
         │
         ▼
 Display Destination Information
@@ -231,10 +231,14 @@ Future<void> loadDestination(
   String destinationId,
 ) async {
 
-  final response = await http.get(
-    Uri.parse(
-      'https://mirro.in/api/destinations/$destinationId.json',
-    ),
+  final response = await http.post(
+    Uri.parse('https://mirro.in/api/destination'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+    },
+    body: jsonEncode(<String, String>{
+      'destinationId': destinationId,
+    }),
   );
 
   final destination =
@@ -319,10 +323,14 @@ Future<void> loadDestination(
   String destinationId,
 ) async {
 
-  final response = await http.get(
-    Uri.parse(
-      'https://mirro.in/api/destinations/$destinationId.json',
-    ),
+  final response = await http.post(
+    Uri.parse('https://mirro.in/api/destination'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+    },
+    body: jsonEncode(<String, String>{
+      'destinationId': destinationId,
+    }),
   );
 
   final destination =
@@ -370,7 +378,7 @@ The following URLs must be publicly accessible:
 ```text
 https://mirro.in/goldensparrow.html
 
-https://mirro.in/api/destinations.json
+https://mirro.in/api/destination (POST endpoint)
 ```
 
 Verification:
@@ -415,8 +423,8 @@ https://mirro.in/goldensparrow.html
 
 API URL:
 
-https://mirro.in/api/destinations.json
+https://mirro.in/api/destination (POST)
 
 Integration Method:
 
-Flutter WebView + JSON API
+Flutter WebView + Dynamic POST API
