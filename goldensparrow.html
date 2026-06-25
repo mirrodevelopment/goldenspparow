@@ -4597,9 +4597,12 @@
           destinationId: activeLocation.id
         }, "*");
 
-        // Mobile Flutter WebView integration - Sends the complete country data object
+        // Mobile Flutter WebView integration
         if (typeof FlutterChannel !== 'undefined') {
-          FlutterChannel.postMessage(JSON.stringify(activeLocation));
+          FlutterChannel.postMessage(JSON.stringify({
+            type: "destination_selected",
+            destinationId: activeLocation.id
+          }));
         }
       }
 
