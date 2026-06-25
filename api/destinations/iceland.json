@@ -4,10 +4,10 @@
     "seasonName":  "Midnight Sun",
     "travelMonths":  "Jun - Aug",
     "description":  "Explore dramatic volcanic cliffs and roaring waterfalls under the surreal midnight sun.",
-    "averageTemperature":  "12Â°C",
+    "averageTemperature":  "12°C",
     "flightDuration":  "5.5h",
     "experienceType":  "Nature",
-    "heroImage":  "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "heroImage":  "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=600&auto=format&fit=crop",
     "attractions":  [
                         {
                             "name":  "Blue Lagoon",
@@ -19,7 +19,7 @@
                         },
                         {
                             "name":  "Golden Circle",
-                            "category":  "Geysers \u0026 Waterfalls"
+                            "category":  "Geysers & Waterfalls"
                         }
                     ]
 }

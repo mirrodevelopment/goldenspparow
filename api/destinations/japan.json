@@ -4,10 +4,10 @@
     "seasonName":  "Kyoto Cherry Blossom",
     "travelMonths":  "Mar - Apr",
     "description":  "Witness the transient beauty of soft pink cherry blossoms framing ancient temples.",
-    "averageTemperature":  "22Â°C",
+    "averageTemperature":  "22°C",
     "flightDuration":  "11h",
     "experienceType":  "Culture",
-    "heroImage":  "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "heroImage":  "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600&auto=format&fit=crop",
     "attractions":  [
                         {
                             "name":  "Mount Fuji",
@@ -19,7 +19,7 @@
                         },
                         {
                             "name":  "Nara",
-                            "category":  "Deer \u0026 Temples"
+                            "category":  "Deer & Temples"
                         }
                     ]
 }

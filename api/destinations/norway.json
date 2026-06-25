@@ -4,10 +4,10 @@
     "seasonName":  "Fjord Aurora Nights",
     "travelMonths":  "Jan - Mar",
     "description":  "Chase the ethereal dance of green auroral curtains over deep, snowy arctic fjords.",
-    "averageTemperature":  "-2Â°C",
+    "averageTemperature":  "-2°C",
     "flightDuration":  "7.5h",
     "experienceType":  "Adventure",
-    "heroImage":  "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "heroImage":  "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?q=80&w=600&auto=format&fit=crop",
     "attractions":  [
                         {
                             "name":  "TromsÃ¸",

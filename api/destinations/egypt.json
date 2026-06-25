@@ -4,14 +4,14 @@
     "seasonName":  "Nile Ancient Autumn",
     "travelMonths":  "Oct - Nov",
     "description":  "Sail the timeless Nile waters to discover towering sandstone temples and forgotten tombs.",
-    "averageTemperature":  "28Â°C",
+    "averageTemperature":  "28°C",
     "flightDuration":  "12h",
     "experienceType":  "History",
-    "heroImage":  "https://images.unsplash.com/photo-1503177119275-0aa32b31d458?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "heroImage":  "https://images.unsplash.com/photo-1503177119275-0aa32b31d458?q=80&w=600&auto=format&fit=crop",
     "attractions":  [
                         {
                             "name":  "Giza",
-                            "category":  "Pyramids \u0026 Sphinx"
+                            "category":  "Pyramids & Sphinx"
                         },
                         {
                             "name":  "Luxor",

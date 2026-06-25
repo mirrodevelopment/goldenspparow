@@ -4,10 +4,10 @@
     "seasonName":  "Lapland Polar Winter",
     "travelMonths":  "Dec - Jan",
     "description":  "Sleigh through snow-covered pine forests under the soft, pastel hues of the polar night.",
-    "averageTemperature":  "-6Â°C",
+    "averageTemperature":  "-6°C",
     "flightDuration":  "8.5h",
     "experienceType":  "Wildlife",
-    "heroImage":  "https://images.unsplash.com/photo-1529963183134-61a90db47eaf?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "heroImage":  "https://images.unsplash.com/photo-1529963183134-61a90db47eaf?q=80&w=600&auto=format&fit=crop",
     "attractions":  [
                         {
                             "name":  "Rovaniemi",

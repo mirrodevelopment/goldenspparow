@@ -4,10 +4,10 @@
     "seasonName":  "Alpine Autumn Chalets",
     "travelMonths":  "Sep - Oct",
     "description":  "Behold the golden autumn foliage reflecting on pristine lakes and soaring peaks.",
-    "averageTemperature":  "14Â°C",
+    "averageTemperature":  "14°C",
     "flightDuration":  "8h",
     "experienceType":  "Scenery",
-    "heroImage":  "https://images.unsplash.com/photo-1482862549707-f63cb32c5fd9?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "heroImage":  "https://images.unsplash.com/photo-1482862549707-f63cb32c5fd9?q=80&w=600&auto=format&fit=crop",
     "attractions":  [
                         {
                             "name":  "Zermatt",
@@ -15,11 +15,11 @@
                         },
                         {
                             "name":  "Interlaken",
-                            "category":  "Lakes \u0026 Valleys"
+                            "category":  "Lakes & Valleys"
                         },
                         {
                             "name":  "Lucerne",
-                            "category":  "Culture \u0026 Heritage"
+                            "category":  "Culture & Heritage"
                         }
                     ]
 }

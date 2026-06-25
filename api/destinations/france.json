@@ -4,10 +4,10 @@
     "seasonName":  "Paris Spring Bloom",
     "travelMonths":  "Jun - Jul",
     "description":  "Wander through endless purple lavender fields and sun-drenched coastal villages of the Riviera.",
-    "averageTemperature":  "25Â°C",
+    "averageTemperature":  "25°C",
     "flightDuration":  "7h",
-    "experienceType":  "Art \u0026 Leisure",
-    "heroImage":  "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+    "experienceType":  "Art & Leisure",
+    "heroImage":  "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=600&auto=format&fit=crop",
     "attractions":  [
                         {
                             "name":  "Provence",
