@@ -4596,6 +4596,11 @@
           type: "destination_selected",
           destinationId: activeLocation.id
         }, "*");
+
+        // Mobile Flutter WebView integration
+        if (typeof FlutterChannel !== 'undefined') {
+          FlutterChannel.postMessage(activeLocation.id);
+        }
       }
 
       updateSliderPosition();
