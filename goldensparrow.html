@@ -1170,61 +1170,45 @@
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
     }
 
-    .globe-controls-rail .command-panel {
-      position: absolute;
-      left: 76px;
-      bottom: 0;
-      transform: scale(0.95);
-      width: 200px;
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 20px;
-      padding: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      z-index: 50;
-      opacity: 0;
+    /* Desktop expand/collapse stack styling (matching mobile animation) */
+    .desktop-layers-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
       pointer-events: none;
-      transition: var(--transition-ease);
+      transition: all 0.4s ease;
     }
 
-    .globe-controls-rail .command-panel.active {
-      opacity: 1;
-      transform: scale(1);
+    .desktop-layers-stack.active {
       pointer-events: auto;
     }
 
-    .globe-controls-rail .command-panel-title {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 6px;
+    .desktop-layers-stack .rail-btn {
+      opacity: 0;
+      transform: translateY(100px) scale(0.2);
+      pointer-events: none;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .globe-controls-rail .command-row {
-      margin-bottom: 10px;
-      text-align: left;
+    .desktop-layers-stack.active .rail-btn {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
     }
 
-    .globe-controls-rail .command-checkbox {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-charcoal);
-      cursor: pointer;
-    }
+    /* Staggered delays when closing (top-down) */
+    .desktop-layers-stack .rail-btn:nth-child(1) { transition-delay: 0s; }
+    .desktop-layers-stack .rail-btn:nth-child(2) { transition-delay: 0.2s; }
+    .desktop-layers-stack .rail-btn:nth-child(3) { transition-delay: 0.4s; }
+    .desktop-layers-stack .rail-btn:nth-child(4) { transition-delay: 0.6s; }
+    .desktop-layers-stack .rail-btn:nth-child(5) { transition-delay: 0.8s; }
 
-    .globe-controls-rail .command-checkbox input {
-      cursor: pointer;
-      accent-color: var(--accent-gold);
-    }
+    /* Staggered delays when opening (bottom-up) */
+    .desktop-layers-stack.active .rail-btn:nth-child(5) { transition-delay: 0.0s; }
+    .desktop-layers-stack.active .rail-btn:nth-child(4) { transition-delay: 0.2s; }
+    .desktop-layers-stack.active .rail-btn:nth-child(3) { transition-delay: 0.4s; }
+    .desktop-layers-stack.active .rail-btn:nth-child(2) { transition-delay: 0.6s; }
+    .desktop-layers-stack.active .rail-btn:nth-child(1) { transition-delay: 0.8s; }
 
     /* Poetic Return to Earth Button style */
     .return-earth-btn {
@@ -2571,80 +2555,52 @@
       </button>
       <!-- Premium Left Sidebar -->
       <div class="globe-controls-sidebar globe-controls-rail">
-        <button class="rail-btn active" id="togglePinsBtn" data-tooltip="Destinations">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-        </button>
- 
-        <button class="rail-btn" id="toggleAudioBtn" data-tooltip="Experiences">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-            <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-          </svg>
-        </button>
- 
-        <button class="rail-btn active" id="toggleCloudsBtn" data-tooltip="Clouds">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
-          </svg>
-        </button>
- 
-        <button class="rail-btn active" id="toggleRotationBtn" data-tooltip="Rotation">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polyline points="23 4 23 10 17 10" />
-            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
-          </svg>
-        </button>
- 
-        <button class="rail-btn active" id="toggleStarsBtn" data-tooltip="Events">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-        </button>
- 
-        <div style="position: relative; width: 100%; display: flex; justify-content: center;">
-          <button class="rail-btn" id="layersMenuBtn" data-tooltip="Layers">
-            <img src="globe_settings_icon.png" alt="Layers" />
+        <!-- Desktop Layers Stack (expands upwards) -->
+        <div class="desktop-layers-stack" id="desktopLayersStack">
+          <button class="rail-btn active" id="toggleStarsBtn" data-tooltip="Events">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
           </button>
- 
-          <!-- Desktop command panel dropdown connected directly beside layers button -->
-          <div class="command-panel" id="layersCommandPanel">
-            <h4 class="command-panel-title">Globe Layers</h4>
-            <div class="command-row">
-              <label class="command-checkbox">
-                <input type="checkbox" id="cpPins" checked> Destinations
-              </label>
-            </div>
-            <div class="command-row">
-              <label class="command-checkbox">
-                <input type="checkbox" id="cpAudio"> Experiences
-              </label>
-            </div>
-            <div class="command-row">
-              <label class="command-checkbox">
-                <input type="checkbox" id="cpClouds" checked> Clouds
-              </label>
-            </div>
-            <div class="command-row">
-              <label class="command-checkbox">
-                <input type="checkbox" id="cpRotation" checked> Rotation
-              </label>
-            </div>
-            <div class="command-row">
-              <label class="command-checkbox">
-                <input type="checkbox" id="cpStars" checked> Events
-              </label>
-            </div>
-          </div>
+
+          <button class="rail-btn active" id="toggleRotationBtn" data-tooltip="Rotation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10" />
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+            </svg>
+          </button>
+
+          <button class="rail-btn active" id="toggleCloudsBtn" data-tooltip="Clouds">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+            </svg>
+          </button>
+
+          <button class="rail-btn" id="toggleAudioBtn" data-tooltip="Experiences">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+            </svg>
+          </button>
+
+          <button class="rail-btn active" id="togglePinsBtn" data-tooltip="Destinations">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </button>
         </div>
+
+        <!-- Trigger button at the bottom of the group -->
+        <button class="rail-btn" id="layersMenuBtn" data-tooltip="Layers">
+          <img src="globe_settings_icon.png" alt="Layers" />
+        </button>
       </div>
 
       <!-- Mobile Layers Vertical Button Stack -->
@@ -4176,17 +4132,17 @@
     document.getElementById('mobToggleAudioBtn')?.addEventListener('click', () => setLayerState('audio', !layersState.audio));
     document.getElementById('mobToggleRotationBtn')?.addEventListener('click', () => setLayerState('rotation', !layersState.rotation));
 
-    // Toggle Desktop Command Panel dropdown
+    // Toggle Desktop Layers Stack
     const layersMenuBtn = document.getElementById('layersMenuBtn');
-    const layersCommandPanel = document.getElementById('layersCommandPanel');
-    if (layersMenuBtn && layersCommandPanel) {
+    const desktopLayersStack = document.getElementById('desktopLayersStack');
+    if (layersMenuBtn && desktopLayersStack) {
       layersMenuBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        layersCommandPanel.classList.toggle('active');
+        desktopLayersStack.classList.toggle('active');
       });
       document.addEventListener('click', (e) => {
-        if (!layersCommandPanel.contains(e.target) && e.target !== layersMenuBtn) {
-          layersCommandPanel.classList.remove('active');
+        if (desktopLayersStack.classList.contains('active') && !desktopLayersStack.contains(e.target) && !layersMenuBtn.contains(e.target)) {
+          desktopLayersStack.classList.remove('active');
         }
       });
     }
