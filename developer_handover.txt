@@ -37,10 +37,10 @@ These are implemented by the Flutter application.
 https://mirro.in/goldensparrow.html
 ```
 
-## Destination Data API
+## Destination Data API (Single-Country Endpoint)
 
 ```text
-https://mirro.in/api/destinations.json
+https://mirro.in/api/destinations/{destinationId}.json
 ```
 
 ---
@@ -66,10 +66,10 @@ postMessage Event
 Flutter Receives destinationId
         │
         ▼
-Fetch destinations.json
+Fetch destinations/{destinationId}.json
         │
         ▼
-Find Destination Data
+Read Destination Data
         │
         ▼
 Display Destination Information
@@ -233,15 +233,12 @@ Future<void> loadDestination(
 
   final response = await http.get(
     Uri.parse(
-      'https://mirro.in/api/destinations.json',
+      'https://mirro.in/api/destinations/$destinationId.json',
     ),
   );
 
-  final destinations =
-      jsonDecode(response.body);
-
   final destination =
-      destinations[destinationId];
+      jsonDecode(response.body);
 
   print(destination);
 }
@@ -324,15 +321,12 @@ Future<void> loadDestination(
 
   final response = await http.get(
     Uri.parse(
-      'https://mirro.in/api/destinations.json',
+      'https://mirro.in/api/destinations/$destinationId.json',
     ),
   );
 
-  final data =
-      jsonDecode(response.body);
-
   final destination =
-      data[destinationId];
+      jsonDecode(response.body);
 
   print(
       destination["country"]);
